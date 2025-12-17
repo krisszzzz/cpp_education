@@ -196,20 +196,6 @@ TEST(ListTest, MoveSemantics) {
     EXPECT_EQ(another.get(), 2);
 }
 
-// Test copy prevention (compile-time check)
-// These tests would cause compilation errors if uncommented,
-// so they're here for documentation purposes
-/*
-TEST(ListTest, CopyPrevention) {
-    List list1;
-    list1.push_back(1);
-
-    // These should cause compilation errors:
-    // List list2(list1); // Copy constructor deleted
-    // List list3 = list1; // Copy assignment deleted
-}
-*/
-
 // Test edge case: alternating push and pop
 TEST(ListTest, AlternatingPushPop) {
     List list;
@@ -253,9 +239,4 @@ TEST(ListTest, LargeListGet) {
 
     // For 101 elements, middle should be 51
     EXPECT_EQ(list.get(), 51);
-}
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }
