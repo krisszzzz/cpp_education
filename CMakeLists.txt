@@ -7,3 +7,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(task_1)
 add_subdirectory(task_2)
+add_subdirectory(task_3)
