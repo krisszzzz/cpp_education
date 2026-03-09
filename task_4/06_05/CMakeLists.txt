@@ -5,10 +5,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
 
-set(Boost_USE_STATIC_LIBS    ON)
-set(Boost_USE_STATIC_RUNTIME ON)
-
-find_package(Boost 1.85 REQUIRED COMPONENTS dll filesystem system)
+find_package(Boost 1.85 REQUIRED COMPONENTS filesystem)
 
 message("Boost libraries: ${Boost_LIBRARIES}")
 
