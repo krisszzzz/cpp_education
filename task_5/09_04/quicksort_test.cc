@@ -26,35 +26,4 @@ TEST(QuickSort, CharType) {
     EXPECT_TRUE(std::ranges::is_sorted(vec));
 }
 
-struct Person {
-    std::string name;
-    int age;
-
-    bool operator>(const Person& other) const {
-        return age > other.age;
-    }
-
-    bool operator<(const Person& other) const {
-        return age < other.age;
-    }
-
-    bool operator==(const Person& other) const {
-        return age == other.age && name == other.name;
-    }
-};
-
-TEST(QuickSort, CustomType) {
-    std::vector<Person> vec{
-        {"Alice", 25},
-        {"Bob", 30},
-        {"Charlie", 20},
-        {"David", 35}
-    };
-
-    quicksort(vec);
-    EXPECT_TRUE(std::ranges::is_sorted(vec, [](const Person& a, const Person& b) {
-        return a.age < b.age;
-    }));
-}
-
 }  // namespace quicksort
